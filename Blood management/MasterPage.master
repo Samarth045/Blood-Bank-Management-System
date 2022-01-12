@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+         <asp:ContentPlaceHolder id="title" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        #logo
+        {
+            width:50px;
+            height:110px;
+            margin-top:-40px;
+        } 
+        #ho1
+        {
+            width:50px;
+            height:50px;
+            margin-top:-10px;
+        }
+        #cr{
+            float:right;
+            width:100%;
+            height:100%;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class ="navbar navbar-inverse set-radius-zero">
+            <div class="container">
+               <div class="navbar-header">
+                   <div style="float:left">
+                       <a class="navbar-brand" href="#">
+                           <h2 style="margin:-5px; width: 582px;">Blood Donation Management System</h2>
+                           <img src="assets/img/logo.jpg" id="logo" />
+                       </a>
+                   </div>
+               </div>
+                <div class="right-div">
+                    <asp:Button ID="Button1" runat="server" Text="Log-me-in" class="btn btn-danger pull-right" OnClick="Button1_Click"/>
+                   <a href="#"><img src="assets/img/homologo.png" id="ho1" /></a>
+                </div>
+            </div>
+        </div>
+       
+        <asp:ContentPlaceHolder id="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <br /><hr />
+        <div id="cr">
+<h3></h3>  
+        </div>
+       
+    </form>
+</body>
+</html>
